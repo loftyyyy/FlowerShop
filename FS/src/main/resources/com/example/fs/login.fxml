@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fs.HelloController">
+   <children>
+      <AnchorPane fx:id="signin_page" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane prefHeight="510.0" prefWidth="456.0" style="-fx-background-color: #90ADC5;">
+               <children>
+                  <ImageView fx:id="faugetlogo_signin" fitHeight="127.0" fitWidth="226.0" layoutX="135.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/2.png" />
+                     </image>
+                  </ImageView>
+                  <VBox layoutX="82.0" layoutY="255.0">
+                     <children>
+                        <TextField fx:id="username_signin" prefHeight="35.0" prefWidth="270.0" promptText="Username" style="-fx-background-color: #FAF6EE; -fx-background-radius: 50;">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <PasswordField fx:id="password_signin" prefHeight="35.0" prefWidth="270.0" promptText="Password" style="-fx-background-color: #FAF6EE; -fx-background-radius: 50;">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </PasswordField>
+                        <Button fx:id="signinBTN" mnemonicParsing="false" onAction="#LogIn" prefHeight="35.0" prefWidth="270.0" style="-fx-background-radius: 50; -fx-background-color: #FAD02C;" text="Sign In">
+                           <font>
+                              <Font name="Tahoma Bold" size="13.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <Hyperlink fx:id="forgotPassword" layoutX="167.0" layoutY="398.0" text="Forgot Password?" />
+                  <Label fx:id="missingCredentials" alignment="CENTER" layoutX="126.0" layoutY="222.0" prefHeight="35.0" prefWidth="203.0" textFill="RED" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="456.0" prefHeight="510.0" prefWidth="347.0" style="-fx-background-color: #FAF6EE;">
+               <children>
+                  <Label layoutX="115.0" layoutY="482.0" text="2024 Fauget. All Rights Served.">
+                     <font>
+                        <Font size="9.0" />
+                     </font>
+                  </Label>
+                  <VBox layoutX="60.0" layoutY="46.0">
+                     <children>
+                        <ImageView fitHeight="137.0" fitWidth="232.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/7.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="114.0" fitWidth="254.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/9.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="127.0" fitWidth="232.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/8.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <Text fill="#3b3b3b" layoutX="109.0" layoutY="424.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't have an account?">
+                     <font>
+                        <Font name="Century Gothic" size="11.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="signupBTN" layoutX="107.0" layoutY="434.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="138.0" style="-fx-background-radius: 50; -fx-background-color: #FAD02C;" text="Sign Up">
+                     <font>
+                        <Font name="Century Gothic Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="signup_page" layoutX="8.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" visible="false">
+         <children>
+            <AnchorPane fx:id="userinput_pane" layoutX="347.0" prefHeight="510.0" prefWidth="456.0" style="-fx-background-color: #FAF6EE;">
+               <children>
+                  <VBox fx:id="userinput_signup" layoutX="82.0" layoutY="216.0">
+                     <children>
+                        <ComboBox fx:id="usertype_button" prefHeight="35.0" prefWidth="270.0" style="-fx-background-color: #a4a2a2;">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </ComboBox>
+                        <TextField fx:id="username_signup" prefHeight="35.0" prefWidth="270.0" promptText="Username" style="-fx-background-radius: 50;">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="email_signup" prefHeight="35.0" prefWidth="270.0" promptText="Email" style="-fx-background-radius: 50;">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <PasswordField fx:id="password_signup" prefHeight="35.0" prefWidth="270.0" promptText="Password" style="-fx-background-radius: 50;">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </PasswordField>
+                        <Button fx:id="signup_button" mnemonicParsing="false" prefHeight="35.0" prefWidth="270.0" style="-fx-background-radius: 50; -fx-background-color: #FAD02C;" text="Sign Up">
+                           <font>
+                              <Font name="Century Gothic Bold" size="13.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <Label fx:id="forgotpassword_signup" layoutX="185.0" layoutY="451.0" text="Forgot Password?">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="faugetlogo_signup" fitHeight="127.0" fitWidth="200.0" layoutX="128.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../FlowerShopV2/src/main/java/com/java/images/1.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="510.0" prefWidth="347.0" style="-fx-background-color: #90ADC5;">
+               <children>
+                  <Label fx:id="AllRightServed_signup" layoutX="112.0" layoutY="482.0" text="2024 Fauget. All Rights Served.">
+                     <font>
+                        <Font size="9.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="notsignedin" fill="#3b3b3b" layoutX="126.0" layoutY="416.0" strokeType="OUTSIDE" strokeWidth="0.0" text="not yet signed in?">
+                     <font>
+                        <Font name="Century Gothic" size="11.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="signin_button11" layoutX="104.0" layoutY="426.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="138.0" style="-fx-background-radius: 50; -fx-background-color: #FAD02C;" text="Sign In">
+                     <font>
+                        <Font name="Century Gothic Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <VBox fx:id="tagline_signup" layoutX="61.0" layoutY="50.0" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <ImageView fitHeight="120.0" fitWidth="228.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../FlowerShopV2/src/main/java/com/java/images/2.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="137.0" fitWidth="228.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../FlowerShopV2/src/main/java/com/java/images/2.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="109.0" fitWidth="230.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../FlowerShopV2/src/main/java/com/java/images/2.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
